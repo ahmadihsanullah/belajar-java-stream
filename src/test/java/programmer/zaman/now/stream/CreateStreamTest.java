@@ -29,9 +29,11 @@ public class CreateStreamTest {
         Stream<Integer> streamInteger = Stream.of(1,2,3,4,4);
         streamInteger.forEach(System.out::println);
 
-        Stream<String> streamArray = Arrays.stream(new String[]{
-                    "ahmad", "ihsanullah", "rabbani"
-        });
+        String[] arr = new String[]{
+            "ahmad", "ihsanullah", "rabbani"
+        };
+
+        Stream<String> streamArray = Arrays.stream(arr);
         streamArray.forEach(System.out::println);
     }
 

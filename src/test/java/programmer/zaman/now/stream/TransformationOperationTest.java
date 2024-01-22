@@ -16,9 +16,9 @@ public class TransformationOperationTest {
 
     @Test
     void testFlatMap() {
-        List.of("ahmad","ihsanullah", "rabbani").stream()
+        List<String> list = List.of("ahmad","ihsan","rabbani");
+            list.stream()
                 .flatMap(upper -> Stream.of(upper.toUpperCase(), upper.length()))
-                .flatMap(value -> Stream.of(value, value))
                 .forEach(System.out::println);
     }
 }

@@ -12,7 +12,6 @@ public class GroupingByeTest {
     void testGroupingBy() {
         Map<String, List<Integer>> collect = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
                 .collect(Collectors.groupingBy(number -> number > 5 ? "Besar" : "Kecil"));
-
         System.out.println(collect);
     }
 
@@ -27,15 +26,14 @@ public class GroupingByeTest {
     @Test
     void testPartitioningBy() {
         Map<Boolean, List<Integer>> collect = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-                .collect(Collectors.partitioningBy(number -> number > 5 ? true : false));
-
+                .collect(Collectors.partitioningBy(number -> number > 5 ));
         System.out.println(collect);
     }
 
     @Test
     void testPartitioningBy2() {
         Map<Boolean, List<String>> collect = Stream.of("ahmad","ihsanullah","rabbani")
-                .collect(Collectors.partitioningBy(words -> words.length() > 5 ? true : false));
+                .collect(Collectors.partitioningBy(words -> words.length() > 5 ));
 
         System.out.println(collect);
     }

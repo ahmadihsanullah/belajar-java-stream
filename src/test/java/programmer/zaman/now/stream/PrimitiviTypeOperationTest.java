@@ -13,8 +13,12 @@ public class PrimitiviTypeOperationTest {
         IntStream intStream2 = IntStream.range(1, 100);
         IntStream intStreamBuilder = IntStream.builder().add(1).add(2).add(3).build();
         intStream.forEach(number -> System.out.println(number));
+        System.out.println("--------------\n");
         intStream2.forEach(number -> System.out.println(number));
-        intStreamBuilder.forEach(number -> System.out.println(number));
+        System.out.println("--------------\n");
+        intStreamBuilder.forEach(System.out::println);
+        System.out.println("--------------\n");
+        
     }
 
     @Test

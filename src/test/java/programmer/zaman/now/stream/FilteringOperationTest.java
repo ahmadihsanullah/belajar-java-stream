@@ -8,17 +8,17 @@ import java.util.Optional;
 public class FilteringOperationTest {
     @Test
     void testFilter() {
-        List.of("ahmad","ihsanullah","rabbani", "iha").stream()
+        List.of("ahmad","ihsanullah","rabbani", "iha","rabbani").stream()
                 .filter(name -> name.length()  > 4)
+                .distinct()
                 .forEach(System.out::println);
     }
 
     @Test
     void testDistinct() {
         List.of("ahmad","ihsanullah","rabbani", "iha", "ahmad", "iha").stream()
-                .distinct()
-                .forEach(System.out::println);
-    }
+                .distinct().forEach(name -> System.out.println(name));
+        }
 
     @Test
     void testFindAny() {

@@ -9,7 +9,7 @@ public class AggregateOperationTest {
 
     @Test
     void testMax() {
-        List.of(1,2,3,4,5).stream()
+        List.of(23,11,26,24,38,36,27,29).stream()
                 .max(Comparator.naturalOrder())
                 .ifPresent(System.out::println);
     }
@@ -52,7 +52,7 @@ public class AggregateOperationTest {
             return -1;
         };
 
-        List.of(21,22,23,24,29,25,28,27,26).stream().sorted(comparator).forEach(System.out::println);
+        List.of(21,22,13,23,24,29,25,28,27,26,92).stream().sorted(comparator).forEach(System.out::println);
 //
 //        List.of(29,34,31, 65,77,82,98).stream()
 //                .max(comparator)
